@@ -5,15 +5,26 @@
     <title>FormCraft</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="fc-content" class="githubpagebuiltin">
 <header>
     <div id="headermain">
         <h1>FormCraft</h1>
-         <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/home">Home</a>
-        <a href="PUTYOURGITHUBURLHEREYOUIDIOTWITHTHENAMEIGOR">Github</a>
+        <a href="page/about.html" onclick="loadPage('page/about.html'); return false;">About</a>
+        <a href="page/contact.html" onclick="loadPage('page/contact.html'); return false;">Contact</a>
+        <a href="page/home.html" onclick="loadPage('page/home.html'); return false;">Home</a>
+        <a href="https://github.com/IgosProjects/formcraft" target="_blank">Github</a>
     </div>
 </header>
+<div id="page-content" class="site-container">
+    <div class="fcp-content">
+        <iframe name="contentFrame" id="contentFrame" src="home.html" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    function loadPage(page) {
+        document.getElementById('contentFrame').src = page;
+    }
+</script>
 </body>
 </html>
